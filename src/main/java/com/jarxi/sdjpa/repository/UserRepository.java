@@ -5,6 +5,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 /* default using jpa */
 public interface UserRepository extends JpaRepository<User, Long> {
-
-    User findById(long id);
 }

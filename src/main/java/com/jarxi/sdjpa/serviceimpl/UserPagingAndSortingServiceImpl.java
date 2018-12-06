@@ -1,24 +1,22 @@
 package com.jarxi.sdjpa.serviceimpl;
 
 import com.jarxi.sdjpa.entity.User;
-import com.jarxi.sdjpa.repository.UserRepository;
+import com.jarxi.sdjpa.repository.UserPagingAndSortingRepository;
 import com.jarxi.sdjpa.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-@Primary
-public class UserServiceImpl implements UserService {
+public class UserPagingAndSortingServiceImpl implements UserService {
 
     @Autowired
-    private UserRepository userRepository;
+    private UserPagingAndSortingRepository userRepository;
 
     @Override
     public List<User> getUserList() {
-        return userRepository.findAll();
+        return null; //userRepository.findAll();
     }
 
     @Override
