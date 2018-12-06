@@ -1,4 +1,4 @@
-package com.jarxi.sdjpa.web;
+package com.jarxi.sdjpa.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

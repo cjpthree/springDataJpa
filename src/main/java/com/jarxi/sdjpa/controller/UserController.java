@@ -1,4 +1,4 @@
-package com.jarxi.sdjpa.web;
+package com.jarxi.sdjpa.controller;
 
 import com.jarxi.sdjpa.entity.User;
 import com.jarxi.sdjpa.service.UserService;

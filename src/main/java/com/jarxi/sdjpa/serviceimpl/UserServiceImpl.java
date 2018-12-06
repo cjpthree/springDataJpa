@@ -1,4 +1,4 @@
-package com.jarxi.sdjpa.service.impl;
+package com.jarxi.sdjpa.serviceimpl;
 
 import com.jarxi.sdjpa.entity.User;
 import com.jarxi.sdjpa.repository.UserRepository;
