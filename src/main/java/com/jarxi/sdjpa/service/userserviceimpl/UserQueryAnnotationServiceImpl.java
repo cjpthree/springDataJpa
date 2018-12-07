@@ -28,12 +28,12 @@ public class UserQueryAnnotationServiceImpl implements UserService {
 
     @Override
     public void save(User user) {
-        userRepository.save(user.getId(), user.getAge());
+        userRepository.save(user.getId(), user.getUserName(), user.getPassword(), user.getAge());
     }
 
     @Override
     public void edit(User user) {
-        userRepository.save(user.getId(), user.getAge());
+        userRepository.save(user.getId(), user.getUserName(), user.getPassword(), user.getAge());
     }
 
     @Override
