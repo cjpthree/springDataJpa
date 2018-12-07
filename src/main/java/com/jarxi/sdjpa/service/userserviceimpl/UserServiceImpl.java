@@ -1,10 +1,9 @@
-package com.jarxi.sdjpa.serviceimpl;
+package com.jarxi.sdjpa.service.userserviceimpl;
 
 import com.jarxi.sdjpa.entity.User;
 import com.jarxi.sdjpa.repository.UserRepository;
 import com.jarxi.sdjpa.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
