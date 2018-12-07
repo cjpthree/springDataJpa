@@ -1,48 +1,52 @@
 package com.jarxi.sdjpa.service.userserviceimpl;
 
 import com.jarxi.sdjpa.entity.User;
-import com.jarxi.sdjpa.repository.UserCrudRepository;
+import com.jarxi.sdjpa.repository.UserDefiningRepository;
 import com.jarxi.sdjpa.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class UserCrudServiceImpl implements UserService {
+@Primary
+public class UserDefiningServiceImpl implements UserService {
 
     @Autowired
-    private UserCrudRepository userRepository;
+    private UserDefiningRepository userRepository;
 
     @Override
     public List<User> getUserList() {
-        return (List<User>) userRepository.findAll();
+        return userRepository.findByIdNot(0);
     }
 
     @Override
     public User findUserById(long id) {
-        return userRepository.findById(id).get();
+        return userRepository.findUserById(id);
     }
 
     @Override
     public void save(User user) {
-        userRepository.save(user);
+        return;
     }
 
     @Override
     public void edit(User user) {
-        userRepository.save(user);
+        return;
     }
 
     @Override
     public void delete(User user) {
-        userRepository.delete(user);
+        userRepository.removeById(user.getId());
+        return;
     }
 
     @Override
     public void deleteById(long id) {
         userRepository.deleteById(id);
+        return;
     }
 }
 
