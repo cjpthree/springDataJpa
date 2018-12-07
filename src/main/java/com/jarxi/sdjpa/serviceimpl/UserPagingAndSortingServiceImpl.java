@@ -4,11 +4,19 @@ import com.jarxi.sdjpa.entity.User;
 import com.jarxi.sdjpa.repository.UserPagingAndSortingRepository;
 import com.jarxi.sdjpa.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 import java.util.List;
 
 @Service
+@Primary
 public class UserPagingAndSortingServiceImpl implements UserService {
 
     @Autowired
@@ -16,7 +24,12 @@ public class UserPagingAndSortingServiceImpl implements UserService {
 
     @Override
     public List<User> getUserList() {
-        return null; //userRepository.findAll();
+        return (List<User>) userRepository.findAll(new Sort(Sort.Direction.DESC, "id"));
+    }
+
+    @ModelAttribute("users")
+    public Page<User> users(@PageableDefault(size = 5) Pageable pageable) {
+        return userRepository.findAll(pageable);
     }
 
     @Override
