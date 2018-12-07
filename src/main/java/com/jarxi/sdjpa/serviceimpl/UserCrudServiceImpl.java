@@ -1,33 +1,25 @@
 package com.jarxi.sdjpa.serviceimpl;
 
 import com.jarxi.sdjpa.entity.User;
-import com.jarxi.sdjpa.repository.UserPagingAndSortingRepository;
+import com.jarxi.sdjpa.repository.UserCrudRepository;
+import com.jarxi.sdjpa.repository.UserRepository;
 import com.jarxi.sdjpa.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.ModelAttribute;
 
 import java.util.List;
 
 @Service
-public class UserPagingAndSortingServiceImpl implements UserService {
+@Primary
+public class UserCrudServiceImpl implements UserService {
 
     @Autowired
-    private UserPagingAndSortingRepository userRepository;
+    private UserCrudRepository userRepository;
 
     @Override
     public List<User> getUserList() {
-        return (List<User>) userRepository.findAll(new Sort(Sort.Direction.DESC, "id"));
-    }
-
-    @ModelAttribute("users")
-    public Page<User> users(@PageableDefault(size = 5) Pageable pageable) {
-        return userRepository.findAll(pageable);
+        return (List<User>) userRepository.findAll();
     }
 
     @Override
