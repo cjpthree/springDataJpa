@@ -1,6 +1,6 @@
-package com.jarxi.sdjpa.controller;
+package com.jarxi.sdjpa.web;
 
-import com.jarxi.sdjpa.entity.User;
+import com.jarxi.sdjpa.domain.User;
 import com.jarxi.sdjpa.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,13 +1,11 @@
 package com.jarxi.sdjpa.service.userserviceimpl;
 
-import com.jarxi.sdjpa.entity.User;
+import com.jarxi.sdjpa.domain.User;
 import com.jarxi.sdjpa.repository.UserDefiningRepository;
 import com.jarxi.sdjpa.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service

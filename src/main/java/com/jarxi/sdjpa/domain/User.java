@@ -1,4 +1,4 @@
-package com.jarxi.sdjpa.entity;
+package com.jarxi.sdjpa.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

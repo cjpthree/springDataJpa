@@ -1,6 +1,6 @@
 package com.jarxi.sdjpa.service;
 
-import com.jarxi.sdjpa.entity.User;
+import com.jarxi.sdjpa.domain.User;
 
 import java.util.List;
 
