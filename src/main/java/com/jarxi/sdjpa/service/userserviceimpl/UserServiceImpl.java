@@ -4,11 +4,13 @@ import com.jarxi.sdjpa.domain.User;
 import com.jarxi.sdjpa.repository.UserRepository;
 import com.jarxi.sdjpa.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Primary
 public class UserServiceImpl implements UserService {
 
     @Autowired

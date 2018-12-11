@@ -1,5 +1,7 @@
 package com.jarxi.sdjpa.domain;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +10,8 @@ import javax.persistence.Id;
 @Entity
 public class User {
     @Id
-    @GeneratedValue
+    @GeneratedValue(generator = "idGenerator")
+    @GenericGenerator(name = "idGenerator", strategy = "com.jarxi.sdjpa.utils.generator.snowFlakeIDGenerator")
     private long id;
     @Column(nullable = false, unique = true)
     private String userName;
