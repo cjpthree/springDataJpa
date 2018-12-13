@@ -52,8 +52,8 @@
         </dependency>
         <dependency>
             <groupId>com.jarxi</groupId>
-            <artifactId>genkey</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <artifactId>jsnowflake</artifactId>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>

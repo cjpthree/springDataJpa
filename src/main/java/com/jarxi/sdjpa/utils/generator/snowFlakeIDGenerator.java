@@ -1,6 +1,6 @@
 package com.jarxi.sdjpa.utils.generator;
 
-import com.jarxi.genkey.utils.JSnowFlake;
+import com.jarxi.util.JSnowFlake;
 import org.hibernate.HibernateException;
 import org.hibernate.MappingException;
 import org.hibernate.engine.spi.SharedSessionContractImplementor;
